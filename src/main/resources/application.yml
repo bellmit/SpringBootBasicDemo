@@ -1,0 +1,118 @@
+server:
+  port: 6666
+  max-http-header-size: 8192
+  tomcat:
+    max-threads: 6
+spring:
+  resources:
+    static-locations: classpath:/static
+  application:
+    name: lapisERP
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #    url: jdbc:mysql://127.0.0.1:3306/water_system?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.0.173:3306/lapis_erp?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: laison!@#
+    #    password: root
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-test-query: SELECT 1
+  redis:
+    #    host: 127.0.0.1
+    #password: laison!@#
+    host: 192.168.0.173
+    password: laison!@#
+    port: 6379
+    timeout: 10s
+    database: 6
+    lettuce:
+      pool:
+        min-idle: 0
+        max-idle: 8
+        max-active: 8
+        max-wait: -1ms
+  mvc:
+    servlet:
+      load-on-startup: 1
+
+
+
+  jackson:
+    time-zone: GMT+8   #Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: NON_NULL
+
+    #serialization:
+    #WRITE_DATES_AS_TIMESTAMPS: false
+  #  security:
+  #    oauth2:
+  #      resource:
+  #        user-info-uri: http://127.0.0.1:8080/api-o/user-me
+  #        prefer-token-info: false
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+mybatis:
+  type-aliases-package: com.laison.nlapis.model
+  mapper-locations: classpath:/mybatis-mappers/*
+  configuration:
+    ##开启驼峰
+    mapUnderscoreToCamelCase: true
+####自定义 ConfigConstant zh_CN en_US ####
+config:
+  sysDbVersion: 1
+  default:
+    social:
+      weixin:
+        provider_id: weixin
+        app_id: wxfd6965ab1fc6adb2
+        app_secret: 66bb4566de776ac699ec1dbed0cc3dd1
+        url_authorize: https://open.weixin.qq.com/connect/qrconnect
+        url_accesstoken: https://api.weixin.qq.com/sns/oauth2/access_token
+      qq:
+        provider_id: qq
+        app_id: 101448999
+        app_secret: 1d958787a87559bad371c0a9e26eef61
+        url_authorize: https://graph.qq.com/oauth2.0/authorize
+        url_accesstoken: https://graph.qq.com/oauth2.0/token
+  #filePath: classpath:/static/file
+  filePath: D:/file
+  language: zh_CN
+  offlinetime: 120000 #2分钟没心跳说明离线
+  isolate:
+    enable: true
+    level: 2
+  writeoffday: 0 #挂失几天后可以注销
+  timesarray:
+    - 120000 #2分钟
+    - 600000 #10分钟
+    - 1800000 #30分钟
+    - 7200000 #2小时
+    - 36000000 #10小时
+    - 43200000 #12小时  到这一次发送的时候差不多到一天了（24小时）
+    - 43200000 #12小时
+    - 43200000 #12小时  到这一次发送的时候差不多到2天了
+  maxtrytimes: 8 #8次大约36小时测试失败 不能超过9  除非加大上面的数组否则会越界
+  taskfailedtime: 5 #单位分  多少时间没响应代表通信失败
+  sendTopicPrefix: .laichen.devctl.dev
+  receiveTopicPrefix: .laichen.devupd.dev
+  heartBeatTopicPrefix: .laichen.devhet.dev
+
+laison:
+  gprsPort: 18819
+
+logging:
+  level:
+    root: info
+    '[com.laison.nlapis.dao]': debug #想打印sql调到debug
+    '[com.laison]': info
+    '[org.redisson]': info
+  file: logs/laison_erp.log
+
+#测试
+

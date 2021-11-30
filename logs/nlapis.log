@@ -1,0 +1,475 @@
+2021-11-30 13:30:21.905  INFO 17264 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 17264 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 13:30:21.912  INFO 17264 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 13:30:22.336  WARN 17264 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.laison.erp.ErpApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+2021-11-30 13:30:22.344  INFO 17264 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 13:30:22.353 ERROR 17264 --- [main] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.laison.erp.ErpApplication]; nested exception is java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:596) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.access$900(ConfigurationClassParser.java:108) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:805) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_171]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:801) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:771) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:185) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at com.laison.erp.ErpApplication.main(ErpApplication.java:10) [classes/:?]
+Caused by: java.io.FileNotFoundException: class path resource [org/springframework/security/config/annotation/authentication/configurers/GlobalAuthenticationConfigurerAdapter.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:51) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:682) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getSuperClass(ConfigurationClassParser.java:995) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:332) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:361) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:263) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:586) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+
+2021-11-30 13:31:11.698  INFO 15128 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 15128 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 13:31:11.705  INFO 15128 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 13:31:12.501  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'deptConfigDao' and 'com.laison.erp.dao.sys.DeptConfigDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.501  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'regionInfoDao' and 'com.laison.erp.dao.sys.RegionInfoDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.501  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sequenceRecordDao' and 'com.laison.erp.dao.sys.SequenceRecordDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.501  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysDeptDao' and 'com.laison.erp.dao.sys.SysDeptDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.501  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysMenuDao' and 'com.laison.erp.dao.sys.SysMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.502  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleDao' and 'com.laison.erp.dao.sys.SysRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.502  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleMenuDao' and 'com.laison.erp.dao.sys.SysRoleMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.502  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserDao' and 'com.laison.erp.dao.sys.SysUserDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.502  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserRoleDao' and 'com.laison.erp.dao.sys.SysUserRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:31:12.502  WARN 15128 --- [main] o.m.s.m.ClassPathMapperScanner           : No MyBatis mapper was found in '[com.laison.erp]' package. Please check your configuration.
+2021-11-30 13:31:12.581  INFO 15128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-30 13:31:12.586  INFO 15128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-30 13:31:12.645  INFO 15128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2021-11-30 13:31:13.121  INFO 15128 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6775700f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:31:13.539  INFO 15128 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9999 (http)
+2021-11-30 13:31:13.568  INFO 15128 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-30 13:31:13.569  INFO 15128 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2021-11-30 13:31:13.772  INFO 15128 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-30 13:31:13.772  INFO 15128 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2017 ms
+2021-11-30 13:31:14.732  WARN 15128 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sysDeptServiceImpl': Unsatisfied dependency expressed through field 'cacheManager'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.cache.CacheManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-30 13:31:14.765  INFO 15128 --- [main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2021-11-30 13:31:14.776  INFO 15128 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 13:31:14.904 ERROR 15128 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field cacheManager in com.laison.erp.service.sys.impl.SysDeptServiceImpl required a bean of type 'org.springframework.cache.CacheManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'cacheManager' in 'CaffeineCacheConfiguration' not loaded because @ConditionalOnClass did not find required class 'com.github.benmanes.caffeine.cache.Caffeine'
+	- Bean method 'cacheManager' in 'EhCacheCacheConfiguration' not loaded because @ConditionalOnClass did not find required class 'net.sf.ehcache.Cache'
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.cache.CacheManager' in your configuration.
+
+2021-11-30 13:58:40.092  INFO 21372 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 21372 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 13:58:40.100  INFO 21372 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'operateLogDao' and 'com.laison.erp.dao.common.OperateLogDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'deptConfigDao' and 'com.laison.erp.dao.sys.DeptConfigDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'regionInfoDao' and 'com.laison.erp.dao.sys.RegionInfoDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sequenceRecordDao' and 'com.laison.erp.dao.sys.SequenceRecordDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysDeptDao' and 'com.laison.erp.dao.sys.SysDeptDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.480  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysMenuDao' and 'com.laison.erp.dao.sys.SysMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.481  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleDao' and 'com.laison.erp.dao.sys.SysRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.481  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleMenuDao' and 'com.laison.erp.dao.sys.SysRoleMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.481  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserDao' and 'com.laison.erp.dao.sys.SysUserDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.481  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserRoleDao' and 'com.laison.erp.dao.sys.SysUserRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 13:58:41.481  WARN 21372 --- [main] o.m.s.m.ClassPathMapperScanner           : No MyBatis mapper was found in '[com.laison.erp]' package. Please check your configuration.
+2021-11-30 13:58:41.544  INFO 21372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-30 13:58:41.550  INFO 21372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-30 13:58:41.615  INFO 21372 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2021-11-30 13:58:42.109  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a96f50c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.119  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfig' of type [com.laison.erp.config.CacheAutoConfig$$EnhancerBySpringCGLIB$$887978c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.139  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$71e92cd2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.207  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.210  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3cc3f13e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.214  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2f6b97be] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.219  INFO 21372 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 13:58:42.704  INFO 21372 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9999 (http)
+2021-11-30 13:58:42.740  INFO 21372 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-30 13:58:42.742  INFO 21372 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2021-11-30 13:58:42.928  INFO 21372 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-30 13:58:42.928  INFO 21372 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2781 ms
+2021-11-30 13:58:43.709  WARN 21372 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'laisonAuthenticationSuccessHandler': Unsatisfied dependency expressed through field 'authorizationServerTokenServices'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerEndpointsConfiguration': Unsatisfied dependency expressed through field 'configurers'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationServerConfig': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-30 13:58:43.730  INFO 21372 --- [main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2021-11-30 13:58:43.746  INFO 21372 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 13:58:43.864 ERROR 21372 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.laison.erp.config.auth.SecurityConfig required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'inMemoryUserDetailsManager' in 'UserDetailsServiceAutoConfiguration' not loaded because @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManagerBean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2021-11-30 14:05:04.933  INFO 20844 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 20844 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 14:05:04.940  INFO 20844 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 14:05:06.228  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'operateLogDao' and 'com.laison.erp.dao.common.OperateLogDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.228  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'deptConfigDao' and 'com.laison.erp.dao.sys.DeptConfigDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.228  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'regionInfoDao' and 'com.laison.erp.dao.sys.RegionInfoDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sequenceRecordDao' and 'com.laison.erp.dao.sys.SequenceRecordDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysDeptDao' and 'com.laison.erp.dao.sys.SysDeptDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysMenuDao' and 'com.laison.erp.dao.sys.SysMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleDao' and 'com.laison.erp.dao.sys.SysRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleMenuDao' and 'com.laison.erp.dao.sys.SysRoleMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.229  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserDao' and 'com.laison.erp.dao.sys.SysUserDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.230  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserRoleDao' and 'com.laison.erp.dao.sys.SysUserRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:05:06.230  WARN 20844 --- [main] o.m.s.m.ClassPathMapperScanner           : No MyBatis mapper was found in '[com.laison.erp]' package. Please check your configuration.
+2021-11-30 14:05:06.297  INFO 20844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-30 14:05:06.301  INFO 20844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-30 14:05:06.360  INFO 20844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2021-11-30 14:05:06.876  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfig' of type [com.laison.erp.config.CacheAutoConfig$$EnhancerBySpringCGLIB$$a16a67fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.909  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a1fc42dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.921  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94e7aa3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.948  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.950  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@37314843' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.951  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$c6d0e58f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:06.955  INFO 20844 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:05:07.450  INFO 20844 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9999 (http)
+2021-11-30 14:05:07.475  INFO 20844 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-30 14:05:07.476  INFO 20844 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2021-11-30 14:05:07.658  INFO 20844 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-30 14:05:07.658  INFO 20844 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2672 ms
+2021-11-30 14:05:08.385  WARN 20844 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'laisonAuthenticationSuccessHandler': Unsatisfied dependency expressed through field 'authorizationServerTokenServices'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerEndpointsConfiguration': Unsatisfied dependency expressed through field 'configurers'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationServerConfig': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-11-30 14:05:08.406  INFO 20844 --- [main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2021-11-30 14:05:08.422  INFO 20844 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 14:05:08.542 ERROR 20844 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.laison.erp.config.auth.SecurityConfig required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- Bean method 'inMemoryUserDetailsManager' in 'UserDetailsServiceAutoConfiguration' not loaded because @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService; SearchStrategy: all) found beans of type 'org.springframework.security.authentication.AuthenticationManager' authenticationManagerBean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2021-11-30 14:06:25.173  INFO 17088 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 17088 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 14:06:25.183  INFO 17088 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 14:06:26.370  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'operateLogDao' and 'com.laison.erp.dao.common.OperateLogDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.370  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'deptConfigDao' and 'com.laison.erp.dao.sys.DeptConfigDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.370  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'regionInfoDao' and 'com.laison.erp.dao.sys.RegionInfoDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.370  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sequenceRecordDao' and 'com.laison.erp.dao.sys.SequenceRecordDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysDeptDao' and 'com.laison.erp.dao.sys.SysDeptDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysMenuDao' and 'com.laison.erp.dao.sys.SysMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleDao' and 'com.laison.erp.dao.sys.SysRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleMenuDao' and 'com.laison.erp.dao.sys.SysRoleMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserDao' and 'com.laison.erp.dao.sys.SysUserDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserRoleDao' and 'com.laison.erp.dao.sys.SysUserRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:06:26.371  WARN 17088 --- [main] o.m.s.m.ClassPathMapperScanner           : No MyBatis mapper was found in '[com.laison.erp]' package. Please check your configuration.
+2021-11-30 14:06:26.431  INFO 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-30 14:06:26.436  INFO 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-30 14:06:26.500  INFO 17088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2021-11-30 14:06:26.953  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfig' of type [com.laison.erp.config.CacheAutoConfig$$EnhancerBySpringCGLIB$$3c6affcb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:26.985  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$3cfcdaab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:26.996  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a44f1271] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:27.021  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:27.023  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@21002393' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:27.025  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$61d17d5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:27.029  INFO 17088 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:06:27.495  INFO 17088 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9999 (http)
+2021-11-30 14:06:27.518  INFO 17088 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-30 14:06:27.519  INFO 17088 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2021-11-30 14:06:27.685  INFO 17088 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-30 14:06:27.685  INFO 17088 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2451 ms
+2021-11-30 14:06:29.319  INFO 17088 --- [main] o.r.Version                              : Redisson 3.7.5
+2021-11-30 14:06:29.857  INFO 17088 --- [redisson-netty-4-3] o.r.c.p.MasterPubSubConnectionPool       : 1 connections initialized for 192.168.0.173/192.168.0.173:6379
+2021-11-30 14:06:29.858  INFO 17088 --- [redisson-netty-4-5] o.r.c.p.MasterConnectionPool             : 32 connections initialized for 192.168.0.173/192.168.0.173:6379
+2021-11-30 14:06:31.030  INFO 17088 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-11-30 14:06:31.126  INFO 17088 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-11-30 14:06:31.347  INFO 17088 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-11-30 14:06:31.743  WARN 17088 --- [main] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2021-11-30 14:06:32.019  INFO 17088 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c1d6ef0, org.springframework.security.web.context.SecurityContextPersistenceFilter@429dde4d, org.springframework.security.web.header.HeaderWriterFilter@63541cd4, org.springframework.security.web.authentication.logout.LogoutFilter@1512efe9, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@7a482b3a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@95aeee4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ef48b08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64745270, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e2c9e24, org.springframework.security.web.session.SessionManagementFilter@6a8ab98f, org.springframework.security.web.access.ExceptionTranslationFilter@5ce0f50a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@589a4305]
+2021-11-30 14:06:32.042  INFO 17088 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@41e43885, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4131261, org.springframework.security.web.context.SecurityContextPersistenceFilter@55cf5626, org.springframework.security.web.header.HeaderWriterFilter@1d6dc2b8, org.springframework.security.web.authentication.logout.LogoutFilter@3fc7abf6, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@63e40188, org.springframework.social.security.SocialAuthenticationFilter@2c7607e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@48224381, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8de8b07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b55f0a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@193c3b1c, org.springframework.security.web.session.SessionManagementFilter@7ec75228, org.springframework.security.web.access.ExceptionTranslationFilter@59509393, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74ed3be4]
+2021-11-30 14:06:32.045  INFO 17088 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aed4a23, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa5b3af, org.springframework.security.web.header.HeaderWriterFilter@3f3a529f, org.springframework.security.web.authentication.logout.LogoutFilter@1002f859, org.springframework.social.security.SocialAuthenticationFilter@67cd193d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@272485a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@344cf00f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@598ff2b3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40b678b3, org.springframework.security.web.session.SessionManagementFilter@ce8b59e, org.springframework.security.web.access.ExceptionTranslationFilter@3e3a07ab, com.laison.erp.config.auth.SecurityConfig$1@5f7c1de0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9d2c0ed]
+2021-11-30 14:06:32.186  INFO 17088 --- [main] i.l.c.EpollProvider                      : Starting without optional epoll library
+2021-11-30 14:06:32.190  INFO 17088 --- [main] i.l.c.KqueueProvider                     : Starting without optional kqueue library
+2021-11-30 14:06:32.253  WARN 17088 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userIdSource' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.UserIdSource]: Factory method 'userIdSource' threw exception; nested exception is java.lang.IllegalArgumentException: One configuration class must implement getUserIdSource from SocialConfigurer.
+2021-11-30 14:06:32.290  INFO 17088 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-11-30 14:06:32.296  INFO 17088 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2021-11-30 14:06:33.419  INFO 17088 --- [main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2021-11-30 14:06:33.434  INFO 17088 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 14:06:33.443 ERROR 17088 --- [main] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userIdSource' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.UserIdSource]: Factory method 'userIdSource' threw exception; nested exception is java.lang.IllegalArgumentException: One configuration class must implement getUserIdSource from SocialConfigurer.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at com.laison.erp.ErpApplication.main(ErpApplication.java:14) [classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.UserIdSource]: Factory method 'userIdSource' threw exception; nested exception is java.lang.IllegalArgumentException: One configuration class must implement getUserIdSource from SocialConfigurer.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: One configuration class must implement getUserIdSource from SocialConfigurer.
+	at org.springframework.util.Assert.notNull(Assert.java:198) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration.userIdSource(SocialConfiguration.java:80) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$93647bf2.CGLIB$userIdSource$0(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$93647bf2$$FastClassBySpringCGLIB$$5616614c.invoke(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$93647bf2.userIdSource(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+
+2021-11-30 14:20:20.717  INFO 20104 --- [main] c.l.e.ErpApplication                     : Starting ErpApplication on DESKTOP-7MO63AQ with PID 20104 (D:\gitlab\erp\target\classes started by SDP in D:\gitlab\erp)
+2021-11-30 14:20:20.724  INFO 20104 --- [main] c.l.e.ErpApplication                     : No active profile set, falling back to default profiles: default
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'operateLogDao' and 'com.laison.erp.dao.common.OperateLogDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'deptConfigDao' and 'com.laison.erp.dao.sys.DeptConfigDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'regionInfoDao' and 'com.laison.erp.dao.sys.RegionInfoDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sequenceRecordDao' and 'com.laison.erp.dao.sys.SequenceRecordDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysDeptDao' and 'com.laison.erp.dao.sys.SysDeptDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysMenuDao' and 'com.laison.erp.dao.sys.SysMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.946  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleDao' and 'com.laison.erp.dao.sys.SysRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.947  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysRoleMenuDao' and 'com.laison.erp.dao.sys.SysRoleMenuDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.947  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserDao' and 'com.laison.erp.dao.sys.SysUserDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.947  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : Skipping MapperFactoryBean with name 'sysUserRoleDao' and 'com.laison.erp.dao.sys.SysUserRoleDao' mapperInterface. Bean already defined with the same name!
+2021-11-30 14:20:21.947  WARN 20104 --- [main] o.m.s.m.ClassPathMapperScanner           : No MyBatis mapper was found in '[com.laison.erp]' package. Please check your configuration.
+2021-11-30 14:20:22.010  INFO 20104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-11-30 14:20:22.014  INFO 20104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-11-30 14:20:22.082  INFO 20104 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 repository interfaces.
+2021-11-30 14:20:22.540  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheAutoConfig' of type [com.laison.erp.config.CacheAutoConfig$$EnhancerBySpringCGLIB$$72b80ab1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.571  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$7349e591] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.582  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da9c1d57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.608  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.611  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@440ef8d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.612  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$981e8843] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:22.616  INFO 20104 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 14:20:23.083  INFO 20104 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9999 (http)
+2021-11-30 14:20:23.107  INFO 20104 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-11-30 14:20:23.108  INFO 20104 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2021-11-30 14:20:23.280  INFO 20104 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-11-30 14:20:23.281  INFO 20104 --- [main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2503 ms
+2021-11-30 14:20:23.890  WARN 20104 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appSingUpUtils': Unsatisfied dependency expressed through field 'usersConnectionRepository'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'usersConnectionRepository' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Unsatisfied dependency expressed through method 'usersConnectionRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactoryLocator' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.connect.ConnectionFactoryLocator]: Factory method 'connectionFactoryLocator' threw exception; nested exception is java.lang.IllegalArgumentException: The clientId property cannot be null
+2021-11-30 14:20:23.911  INFO 20104 --- [main] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2021-11-30 14:20:23.922  INFO 20104 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-11-30 14:20:23.929 ERROR 20104 --- [main] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'appSingUpUtils': Unsatisfied dependency expressed through field 'usersConnectionRepository'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'usersConnectionRepository' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Unsatisfied dependency expressed through method 'usersConnectionRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactoryLocator' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.connect.ConnectionFactoryLocator]: Factory method 'connectionFactoryLocator' threw exception; nested exception is java.lang.IllegalArgumentException: The clientId property cannot be null
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:598) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:376) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:847) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204) [spring-boot-2.1.9.RELEASE.jar:2.1.9.RELEASE]
+	at com.laison.erp.ErpApplication.main(ErpApplication.java:14) [classes/:?]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'usersConnectionRepository' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Unsatisfied dependency expressed through method 'usersConnectionRepository' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactoryLocator' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.connect.ConnectionFactoryLocator]: Factory method 'connectionFactoryLocator' threw exception; nested exception is java.lang.IllegalArgumentException: The clientId property cannot be null
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'connectionFactoryLocator' defined in class path resource [org/springframework/social/config/annotation/SocialConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.connect.ConnectionFactoryLocator]: Factory method 'connectionFactoryLocator' threw exception; nested exception is java.lang.IllegalArgumentException: The clientId property cannot be null
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.social.connect.ConnectionFactoryLocator]: Factory method 'connectionFactoryLocator' threw exception; nested exception is java.lang.IllegalArgumentException: The clientId property cannot be null
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: The clientId property cannot be null
+	at org.springframework.util.Assert.notNull(Assert.java:198) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.social.oauth2.OAuth2Template.<init>(OAuth2Template.java:82) ~[spring-social-core-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.social.oauth2.OAuth2Template.<init>(OAuth2Template.java:70) ~[spring-social-core-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at com.laison.erp.config.auth.qq.connect.QQOAuth2Template.<init>(QQOAuth2Template.java:28) ~[classes/:?]
+	at com.laison.erp.config.auth.qq.connect.QQServiceProvider.<init>(QQServiceProvider.java:26) ~[classes/:?]
+	at com.laison.erp.config.auth.qq.connect.QQConnectionFactory.<init>(QQConnectionFactory.java:17) ~[classes/:?]
+	at com.laison.erp.config.auth.qq.config.QQAutoConfig.createConnectionFactory(QQAutoConfig.java:33) ~[classes/:?]
+	at com.laison.erp.config.auth.qq.config.QQAutoConfig.addConnectionFactories(QQAutoConfig.java:28) ~[classes/:?]
+	at org.springframework.social.config.annotation.SocialConfiguration.connectionFactoryLocator(SocialConfiguration.java:58) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$c9b186d8.CGLIB$connectionFactoryLocator$2(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$c9b186d8$$FastClassBySpringCGLIB$$e957e534.invoke(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.social.config.annotation.SocialConfiguration$$EnhancerBySpringCGLIB$$c9b186d8.connectionFactoryLocator(<generated>) ~[spring-social-config-1.1.6.RELEASE.jar:1.1.6.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1255) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1175) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:595) ~[spring-beans-5.1.10.RELEASE.jar:5.1.10.RELEASE]
+	... 19 more
+

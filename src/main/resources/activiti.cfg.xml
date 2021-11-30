@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!--配置数据库相关信息-->
+    <bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+        <!--数据库驱动-->
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver"/>
+        <!--数据库连接-->
+        <property name="jdbcUrl" value="jdbc:mysql://192.168.0.173:3306/water_system?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;useSSL=false&amp;serverTimezone=UTC"/>
+        <!--数据库用户名-->
+        <property name="jdbcUsername" value="root"/>
+        <!--数据库密码-->
+        <property name="jdbcPassword" value="laison!@#"/>
+        <!--数据库生成策略 true:数据库已经有直接使用，不存在创建-->
+        <property name="databaseSchemaUpdate" value="true"/>
+    </bean>
+
+    <!--数据库连接池-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value=""/>
+        <property name="username" value="root"/>
+        <property name="password" value="1234"/>
+        <property name="maxActive" value="3"/>
+        <property name="maxIdle" value="1"/>
+    </bean>
+    <!--<bean id="processEngineConfiguration" class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+        <!--<property name="databaseSchemaUpdate" value="true"/>-->
+    <!--</bean>-->
+</beans>
