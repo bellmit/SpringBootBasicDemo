@@ -25,7 +25,9 @@ public class CustomOauthExceptionSerializer extends StdSerializer<CustomOauthExc
         gen.writeStartObject();
         
         gen.writeNumberField("code", value.getHttpErrorCode());
-        gen.writeStringField("errors", I18NResourceBundleUtils.getLocalizedText(value.getMessage()));
+        String message = value.getMessage();
+        gen.writeStringField("errors", I18NResourceBundleUtils.getLocalizedText(message));
+        //gen.writeStringField("errors", I18NResourceBundleUtils.getLocalizedText(message));
         if (value.getAdditionalInformation()!=null) {
             for (Map.Entry<String, String> entry : value.getAdditionalInformation().entrySet()) {
                 String key = entry.getKey();

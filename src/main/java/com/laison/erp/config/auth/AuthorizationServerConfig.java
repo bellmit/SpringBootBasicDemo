@@ -2,7 +2,7 @@ package com.laison.erp.config.auth;
 
 import com.laison.erp.common.utils.SpringContextUtils;
 import com.laison.erp.config.auth.exception.MyWebResponseExceptionTranslator;
-import com.laison.erp.config.redis.RedisAuthorizationCodeServices;
+import com.laison.erp.config.RedisAuthorizationCodeServices;
 import com.laison.erp.model.common.LoginAppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -116,8 +116,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         
         return redisTokenStore;
     }
-    
 
+    /**
+     * 关联
+     */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
     	//laisonAuthenticationSuccessHandler.setTokenGranter(endpoints);

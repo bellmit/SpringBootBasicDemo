@@ -15,12 +15,17 @@ public class I18NResourceBundleUtils {
 
     static {
         rbMap = new HashMap<>();
-        rbMap.put("zh_CN", ResourceBundle.getBundle("zh_CN"));
-        rbMap.put("en_US", ResourceBundle.getBundle("en_US"));
-        //rbMap.put("pt_PT", ResourceBundle.getBundle("pt_PT"));
-        rbMap.put("ar_EG", ResourceBundle.getBundle("ar_EG"));
-        rb = rbMap.get("ar_EG");
-        language = ConfigConstant.I18N;
+        try {
+            rbMap.put("zh_CN", ResourceBundle.getBundle("zh_CN"));
+            rbMap.put("en_US", ResourceBundle.getBundle("en_US"));
+            //rbMap.put("pt_PT", ResourceBundle.getBundle("pt_PT"));
+            rbMap.put("ar_EG", ResourceBundle.getBundle("ar_EG"));
+            rb = rbMap.get("ar_EG");
+            language = ConfigConstant.I18N;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     public static boolean contains(String language) {

@@ -2,6 +2,7 @@ package com.laison.erp.config.auth;
 
 import com.laison.erp.common.constants.PermitAllUrl;
 import com.laison.erp.config.ExceptionHandlerAdvice;
+import com.laison.erp.config.auth.social.LaisonSpringSocialConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;

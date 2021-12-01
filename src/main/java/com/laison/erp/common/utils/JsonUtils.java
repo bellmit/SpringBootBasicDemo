@@ -125,7 +125,7 @@ public class JsonUtils {
 
 		@Override
 		public void serialize(String value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
-			    gen.writeString(I18NResourceBundleUtils.getLocalizedText(value));			
+			    gen.writeString(value);
 		}
     	
     }

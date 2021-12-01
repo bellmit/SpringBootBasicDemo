@@ -26,7 +26,7 @@ spring:
     password: laison!@#
     port: 6379
     timeout: 10s
-    database: 6
+    database: 3
     lettuce:
       pool:
         min-idle: 0
@@ -61,9 +61,9 @@ mybatis:
   type-aliases-package: com.laison.nlapis.model
   mapper-locations: classpath:/mybatis-mappers/*
   configuration:
-    ##开启驼峰
+    ##
     mapUnderscoreToCamelCase: true
-####自定义 ConfigConstant zh_CN en_US ####
+#### ConfigConstant zh_CN en_US ####
 config:
   sysDbVersion: 1
   default:
@@ -83,22 +83,22 @@ config:
   #filePath: classpath:/static/file
   filePath: D:/file
   language: zh_CN
-  offlinetime: 120000 #2分钟没心跳说明离线
+  offlinetime: 120000
   isolate:
     enable: true
     level: 2
-  writeoffday: 0 #挂失几天后可以注销
+  writeoffday: 0
   timesarray:
-    - 120000 #2分钟
-    - 600000 #10分钟
-    - 1800000 #30分钟
-    - 7200000 #2小时
-    - 36000000 #10小时
-    - 43200000 #12小时  到这一次发送的时候差不多到一天了（24小时）
-    - 43200000 #12小时
-    - 43200000 #12小时  到这一次发送的时候差不多到2天了
-  maxtrytimes: 8 #8次大约36小时测试失败 不能超过9  除非加大上面的数组否则会越界
-  taskfailedtime: 5 #单位分  多少时间没响应代表通信失败
+    - 120000
+    - 600000
+    - 1800000
+    - 7200000
+    - 36000000
+    - 43200000
+    - 43200000
+    - 43200000
+  maxtrytimes: 8
+  taskfailedtime: 5
   sendTopicPrefix: .laichen.devctl.dev
   receiveTopicPrefix: .laichen.devupd.dev
   heartBeatTopicPrefix: .laichen.devhet.dev
@@ -109,10 +109,10 @@ laison:
 logging:
   level:
     root: info
-    '[com.laison.nlapis.dao]': debug #想打印sql调到debug
+    '[com.laison.nlapis.dao]': debug #sqldebug
     '[com.laison]': info
     '[org.redisson]': info
   file: logs/laison_erp.log
 
-#测试
+#
 

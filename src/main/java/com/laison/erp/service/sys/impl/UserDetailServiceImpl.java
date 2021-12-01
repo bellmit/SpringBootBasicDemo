@@ -45,9 +45,9 @@ public class UserDetailServiceImpl implements UserDetailsService,SocialUserDetai
         }else if (!loginAppUser.getStatus()) {
             throw new DisabledException("用户已作废");
         }else  {
-        	 if(CollectionUtils.isEmpty(loginAppUser.getPermissions())) {
-        		 throw new DisabledException("用户已作废");
-             }
+//        	 if(CollectionUtils.isEmpty(loginAppUser.getPermissions())) {
+//        		 throw new DisabledException("用户已作废");
+//             }
         }
         //String objectToJsonWhitI18N = JsonUtils.objectToJson(loginAppUser);
         //System.out.println(objectToJsonWhitI18N);
@@ -68,9 +68,9 @@ public class UserDetailServiceImpl implements UserDetailsService,SocialUserDetai
         }else if (!loginAppUser.getStatus()) {
             throw new DisabledException("用户已作废");
         }else  {
-       	 if(CollectionUtils.isEmpty(loginAppUser.getPermissions())) {
-    		 throw new DisabledException("用户已作废");
-         }
+//       	 if(CollectionUtils.isEmpty(loginAppUser.getPermissions())) {
+//    		 throw new DisabledException("用户已作废");
+//         }
     }
         return loginAppUser;
 	}
